@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+body{
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+h1 {
+  font-family: 'DM Serif Display', serif;
+}
+p{
+  font-size: 18px;
+}
+
+/*------------------------------------- NAVBAR --------------------------------------- */
+.container-fluid {
+  padding: 1% 10%;
+}
+.navbar{
+  position: static;
+  background-color: white;
+  color: white
+/*biar logo dan navbar nya jadi sebaris di sebelah kanan & kiri*/
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-link{
+  display: flex; /*biar nav link nya jadi sebaris horizontal bukan sekolom kebawah*/
+  align-items: center;
+  cursor: pointer;
+}
+.nav-link li{
+  margin: 0 15px;
+  list-style-type: none;
+}
+.logo{
+  width: 130px;
+  height: 20px;
+}
+
+/*---------------------------------- HEADER -------------------------------- */
+.header{
+  background-color: hsl(256, 26%, 20%);
+  color: white;
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+}
+.div-header-img{
+  position: relative;
+}
+.header-img{
+  margin: 100px 100px -250px 0;
+  position: absolute;
+}
+.header::after{
+  content: '';
+  background-image: url("images/bg-pattern-intro-right-desktop.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.header::before{
+  content: '';
+  background-image: url("images/bg-pattern-intro-left-desktop.svg");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /*biar cursor: pointer nya berhasil, krn afer before itu nge block efek cursor*/
+}
+.header-content{
+  padding: 2% 10%;
+}
+.header-content h1{
+  font-size: 8vmin;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+/*--------------------------------------- FEATURES -------------------------------- */
+#features {
+  padding: 10%;
+  background-color: white;
+}
+#features h1 {
+  font-size: 60px;
+}
+#features hr {
+  height: 2px;
+  width: 12%;
+  color: hsl(256, 26%, 20%);
+  margin-bottom: 30px;
+  margin-left: 15px;
+}
+.icon {
+  padding-bottom: 30px;
+}
+.feature-box {
+  padding-top: 4%;
+  justify-content: space-between;
+}
+#features p{
+  color: hsl(273, 4%, 51%);
+}
+
+/*--------------------------------------- HOW WE WORK -------------------------------- */
+.howwework {
+  margin: 0 10% 5%;
+  background-color: hsl(256, 26%, 20%);
+  color: white;
+  padding: 4% 5%;
+  position: relative;
+  align-items: center;
+}
+.howwework::after{
+  content: '';
+  background-image: url("images/bg-pattern-how-we-work-desktop.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.howwework h1 {
+  font-size: 50px;
+}
+.right-div {
+  text-align: right;
+}
+.button {
+  font-size: 13px;
+  background-color: transparent;
+  border: solid;
+  color: white;
+  padding: 10px 15px;
+  letter-spacing: 3px;
+  height: auto;
+  width: auto;
+  cursor: pointer; 
+}
+.button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+/*--------------------------------------- FOOTER -------------------------------- */
+#footer {
+  background-color: hsl(0, 0%, 98%);
+  padding: 5% 10% 2%;
+  position: relative;
+  color: black;
+}
+#footer::before{
+  content: '';
+  background-image: url("images/bg-pattern-footer-desktop.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.footer i {
+  cursor: pointer;
+}
+
+.social {
+  text-align: right;
+}
+.social a{
+  font-size: 32px;
+  color: gray;
+  margin: 0 5px;
+}
+.social a:hover{ /* icon footer */
+  color: hsl(256, 26%, 20%);
+}
+.footer .col-sm-3 {
+  margin-bottom: 10px;
+}
+.footer hr {
+  height:2px;
+  border-width:0;
+  color:gray;
+  margin-top:30px;
+}
+.footer p {
+  font-size: 14px;
+  margin: 10px 5px;
+  color: hsl(273, 4%, 51%);
+}
+.footer p a{
+  color: black;
+  opacity: 0.7;
+  font-weight: 600;
+}
+.footer p a:hover{
+  opacity: 1;
+}
+
+/*---------------- RESPONSIVE WEBSITE ----------------*/
+@media (max-width:1528px) {
+  .nav-link{
+    justify-content: center;
+  }
+  .header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .header::after{
+    background-image: url("images/bg-pattern-intro-left-mobile.svg");
+    background-position: top left;
+  }
+  .header::before{
+    background-image: url("images/bg-pattern-intro-right-mobile.svg");
+    background-position: bottom right;
+    transform: translateY(30%);
+  }
+  .header-content h1{
+    font-size: 11vmin;
+    margin-top: 80px;
+  }
+  .header-content p {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  .header-img{
+    margin: 0;
+    position: relative;
+  }
+  #features {
+    text-align: center;
+  }
+  #features h1 {
+    font-size: 50px;
+    margin-bottom: 80px;
+  }
+  #features hr {
+    width: 40%;
+    margin: auto; /*biar posisi garisnya ada ditengah*/
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+  .howwework {
+    padding: 15% 10%;
+    margin: 2% 7%;
+  }
+  .howwework::after{
+    background-image: url("images/bg-pattern-how-we-work-mobile.svg");
+  }
+  .howwework h1 {
+    font-size: 45px;
+    text-align: center;
+  }
+  .right-div, .social {
+    text-align: center;
+    margin-top: 35px;
+  }
+  #footer {
+    margin-top: 100px;
+  }
+  .footer {
+    text-align: center;
+  }
+
+}
