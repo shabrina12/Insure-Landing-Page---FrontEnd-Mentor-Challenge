@@ -1,5 +1,6 @@
-# Frontend Mentor - Insure landing page
+# Frontend Mentor Challenge - Insure landing page
+Responsive Front End Website using HTML and CSS
 
-Overview website on https://shabrina12.github.io/Insure-Landing-Page---FrontEnd-Mentor-Challenge/
+Result: https://shabrina12.github.io/Insure-Landing-Page---FrontEnd-Mentor-Challenge/
 
 ![Design preview for the Insure landing page coding challenge](./design/desktop-preview.jpg)
